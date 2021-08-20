@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Javascript</title>
+    <style>
+        pre{
+            font-size: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <h1>Inspect element untuk melihat javascriptnya</h1>
+    <hr>
+    <h1>Pengertian Array</h1>
+    <h3>Array merupakan variabel khusus yang dapat menampung lebih dari satu data pada suatu waktu.</h3>
+    <h3>Contohnya kita mempunyai daftar item buah-buahan seperti pisang, pepaya, durian dan apel, kita bisa menyimpan semua item tersebut dalam satu variabel, misalnya variabel buah</h3>
+    <hr>
+    <h1>Cara Inisialisasi Array</h1>
+    <h3>Untuk membuat array pada JavaScript, kita bisa menggunakan sintaks di bawah ini.</h3>
+    <h3>Sintaks</h3>
+    <pre>
+var nama_array = [item1, item2, item3, ....];
+    </pre>
+    <h3>Atau bisa menggunakan </h3>
+    <pre>
+var nama_array = new Array(item1, item2, item3, ....);
+    </pre>
+    <h3>Contoh</h3>
+    <pre>
+var mobil = ["Avanza", "Agya", "Ayla"];
+    </pre>
+    <h3>Atau bisa menggunakan </h3>
+    <pre>
+var mobil = new Array("Avanza", "Agya","Ayla")
+    </pre>
+    <hr>
+
+    <h1>Mengubah Data Array</h1>
+    <h3>Selain membuat kita juga bisa mengubah data array.</h3>
+    <h3>Sintaks</h3>
+    <pre>
+nama_array[key]="newItem";
+    </pre>
+    <h3>Contoh</h3>
+    <pre>
+var mobil = ["Avanza", "Agya", "Ayla"];
+mobil[0]="Fortuner";
+console.log(mobil);
+    </pre>
+    <hr>
+
+    <h1>Menghitung Jumlah Array</h1>
+    <h3>Menghitung jumlah array, hal ini sangat berguna ketika mempunyai banyak elemen array yang tidak memungkinkan untuk dihitung secara manual.</h3>
+    <h3>Sintaks</h3>
+    <pre>
+nama_array.length; 
+    </pre>
+    <h3>Contoh</h3>
+    <pre>
+var mobil = ["Avanza", "Agya", "Ayla"];
+console.log(mobil.length); // Hasilnya : "3"
+    </pre>
+    <hr>
+
+    <h1>Mengakses Data Array</h1>
+    <h3>Variabel yang dideklarasikan dalam fungsi JavaScript, menjadi variabel lokal (hanya di fungsi tersebut).</h3>
+    <h3>Sintaks</h3>
+    <pre>
+var nama_array = [item1, item2, item3, ....];
+console.log(nama_array[keyitem]);
+    </pre>
+    <h3>Contoh</h3>
+    <pre>
+var mobil = ["Avanza", "Agya", "Ayla"];
+console.log(mobil[1]); //Output : "Agya"
+console.log(mobil[0]); // Output : "Avanza"
+console.log(mobil[mobil.length - 1]); // output : "Ayla"
+    </pre>
+    <hr>
+
+    <h1>Mengubah Array menjadi String (.toString)</h1>
+    <h3>Kita dapat mengubah array menjadi string dengan cara seperti dibawah</h3>
+    <h3>Sintaks</h3>
+    <pre>
+var nama_array = [item1, item2, item3, ....];
+nama_array.toString();
+    </pre>
+    <h3>Contoh</h3>
+    <pre>
+var mobil = ["Avanza", "Agya", "Ayla"];
+console.log(mobil.toString()); // Output : "Avanza,Agya,Ayla"
+    </pre>
+    <hr>
+
+    <h1>Mengubah Array menjadi String dengan Delimiter(Pemisah Custom)</h1>
+    <h3>Apabila kita ingin mengganti pemisah dari defaultnya koma dengan yang lainnya, kita bisa menggunakan sintaks berikut ini.</h3>
+    <h3>Sintaks</h3>
+    <pre>
+nama_array.join(" pemisah_yang_diinginkan ");
+    </pre>
+    <h3>Contoh</h3>
+    <pre>
+var mobil = ["Avanza", "Agya", "Ayla"];
+console.log(mobil.join("-")); // Output : "Avanza - Agya - Ayla"
+    </pre>
+    <hr>
+
+    <h1>Mengeluarkan data dari Array (.pop)</h1>
+    <h3>engeluarkan data terakhir dari array. Konsepnya sama seperti algoritma Stack</h3>
+    <h3>Sintaks</h3>
+    <pre>
+nama_array.pop();
+    </pre>
+    <h3>Contoh</h3>
+    <pre>
+var mobil = ["Avanza", "Agya", "Ayla"];
+mobil.pop(); // mengeluarkan "Ayla" dari array
+console.log(mobil.join("-")); // cetak array mobil hasilnya "Avanza - Agya"
+    </pre>
+    <hr>
+
+    <h1>Memasukkan data ke Array (.push)</h1>
+    <h3>Kita bisa memasukkan data ke dalam array dengan menggunakan sintaks di bawah ini.</h3>
+    <h3>Sintaks</h3>
+    <pre>
+nama_array.push("new_item");
+    </pre>
+    <h3>Contoh</h3>
+    <pre>
+var mobil = ["Avanza", "Agya", "Ayla"];
+mobil.push("Fortuner"); //Memasukkan "Fortuner" ke array mobil
+console.log(mobil.join("-")); // cetak array mobil hasilnya "Avanza - Agya - Ayla - Fortuner"
+    </pre>
+    <hr>
+
+    <h1>Menggabungkan dua Array (.concat)</h1>
+    <h3>Kita bisa menggabungkan dua array menjadi satu array saja dengan menggunakan sintaks di bawah ini.</h3>
+    <h3>Sintaks</h3>
+    <pre>
+var arraygabungan = Array1.concat(Array2);
+    </pre>
+    <h3>Contoh</h3>
+    <pre>
+var mobilBudget = ["Avanza", "Agya", "Ayla"];
+var mobilMahal = ["Fortuner", "Lamborghini"];
+var mobilgabungan = mobilBudget.concat(mobilMahal);
+console.log(mobilgabungan.join("-")); // cetak array mobil hasilnya "Avanza - Agya - Ayla - Fortuner - Lamborghini"
+    </pre>
+    <hr>
+
+    <h1>Menggabungkan tiga Array (.concat)</h1>
+    <h3>Untuk menggabungkan tiga array, kita bisa melihat sintaks dan contoh di bawah ini.</h3>
+    <h3>Sintaks</h3>
+    <pre>
+var Arraygabung = array1.concat(array2,array3);
+    </pre>
+    <h3>Contoh</h3>
+    <pre>
+var mobilBudget = ["Avanza", "Agya", "Ayla"];
+var mobilMahal = ["Fortuner", "Lamborghini"];
+var motor = ["Verza", "CB 150R", "MegaPro"];
+var kendaraanBermotor = mobilBudget.concat(mobilMahal, motor);
+console.log(mobilgabungan.join("-")); // cetak array mobil hasilnya "Avanza - Agya - Ayla - Fortuner - Lamborghini - "Verza" - "CB 150R" - "MegaPro"
+    </pre>
+    <hr>
+
+    <h1>Iterasi Data dari Array dengan For</h1>
+    <h3>Kita bisa mengakses seluruh array dengan cara looping menggunakan for.</h3>
+    <h3>Contoh</h3>
+    <pre>
+var mobil = ["Avanza", "Agya", "Ayla"];
+for(i = 0 ; i &#60; mobil.length ; i++)
+{
+    console.log(mobil[i]);
+}
+    </pre>
+    <hr>
+
+    <h1>Iterasi Data dari Array dengan ForEach (Lebih Recomend)</h1>
+    <h3>Foreach artinya kita tidak perlu membuat iterasi looping dari 0 sampai array.length</h3>
+    <h3>Contoh</h3>
+    <pre>
+var mobil = ["Avanza", "Agya", "Ayla"];
+mobil.forEach(mobils => {
+    console.log(mobils);
+});
+    </pre>
+    <hr>
+
+    <h1>Iterasi menggunakan metode .map</h1>
+    <h3>Kita bisa menggunakan metode map() untuk membuat array baru dengan melakukan fungsi pada setiap elemen array.</h3>
+    <h3>Metode map() tidak menjalankan fungsi untuk elemen array tanpa nilai.</h3>
+    <h3>Metode map() tidak mengubah array asli.</h3>
+    <h3>Contoh</h3>
+    <pre>
+var nomor1 = [5, 10, 15, 20];
+var nomor2 = nomor1.map(value => {
+    return value * 2;
+});
+
+console.log(nomor2.join("-")); // cetak array mobil hasilnya "10 - 20 - 30 - 40"
+    </pre>
+    <hr>
+
+
+    <script>
+        console.log("=========Array=========");
+        console.log("Membuat Array");
+        let identitas = ["Nama", "Umur", "Alamat"];
+        console.log("Ambil Element Array");
+        console.log("Array element ke 0 = " + identitas[0]);
+        console.log("Ubah Element Array");
+        identitas[0] = "NamaLengkap";
+        console.log("Array element ke 0 yang baru =  " + identitas[0]);
+        console.log("Hitung Jumlah Array");
+        console.log("Jumlah Element Array dari array identitas = " + identitas.length);
+        console.log("=========Array ke String=========");
+        console.log("Array ke String dengan .tostring()");
+        console.log("Array ke String dari array identitas = " + identitas.toString());
+        console.log("Array ke String dengan .join(parameter delimiter)");
+        console.log("Array ke String dari array identitas = " + identitas.join("-"));
+        console.log("=========Tambah dan Hapus Data Array=========");
+        const namahewan = ["Sapi", "Kuda", "Kucing"];
+        console.log("Hapus Data dengan .pop()");
+        console.log("Hapus Data Pop 1 kali yaitu " + namahewan.pop());
+        console.log("Data Array namahewan = " + namahewan.join("-"));
+        console.log("Tambah Data dengan .push()");
+        console.log("Push Data Kambing kepada array namahewan di index ke " + namahewan.push("Kambing"));
+        console.log("Data Array namahewan = " + namahewan.join("-"));
+        console.log("=========Iterasi Array=========");
+        console.log("Iterasi For");
+        var mobil = ["Avanza", "Agya", "Ayla"];
+        for (let index = 0; index < mobil.length; index++) {
+            console.log(mobil[index]);
+        }
+        console.log("Iterasi ForEach");
+        mobil.forEach((mobils) => {
+            console.log(mobils);
+        });
+        
+        console.log("Iterasi Map");
+        var nomor1 = [5, 10, 15, 20];
+        var nomor2 = nomor1.map(value => {
+            return value * 2;
+        });
+
+        console.log(nomor2.join("-"));
+    </script>
+</body>
+</html>

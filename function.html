@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function Javascript</title>
+    <style>
+        pre{
+            font-size: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <h1>Inspect element untuk melihat javascriptnya</h1>
+    <hr>
+    <h1>Pengertian Fungsi</h1>
+    <h3>Fungsi JavaScript adalah blok kode yang dirancang untuk melakukan tugas tertentu.</h3>
+    <h1>Aturan Membuat Fungsi</h1>
+    <ol>
+        <li>Fungsi JavaScript didefinisikan dengan keyword "function", lalu diikuti oleh nama fungsi, lalu diikuti oleh tanda kurung ().</li>
+        <li>Nama fungsi dapat berisi huruf, angka, underscore (_), dan tanda dolar (aturan yang sama dengan variabel).</li>
+        <li>Tanda kurung termasuk nama parameter dipisahkan oleh koma, contohnya seperti (parameter1, parameter2, ...)</li>
+        <li>Kode yang akan dieksekusi ditempatkan di dalam kurung kurawal: {}</li>
+    </ol>
+    <hr>
+    <h1>Fungsi dengan "return"</h1>
+    <h3>Fungsi JavaScript dapat ditambahkan dengan statement "return" untuk mengembalikan data.</h3>
+    <h3>Sintaks</h3>
+    <pre>
+if(kondisi)
+{
+    //kode yang akan dijalankan jika true
+}
+    </pre>
+    <h3>Contoh</h3>
+    <pre>
+function kalikanAngka(angka1, angka2)
+{
+    return angka1*angka2; 
+}
+    </pre>
+    <hr>
+    <h1>Variabel lokal pada Fungsi</h1>
+    <h3>Variabel yang dideklarasikan dalam fungsi JavaScript, menjadi variabel lokal (hanya di fungsi tersebut).</h3>
+    <h3>Sintaks</h3>
+    <pre>
+//Kode disini tidak bisa menggunakan variabel namaMobil
+function fungsiMobil()
+{
+    var namaMobil = "Avanza";
+    //Kode disini dapat menggunakan variabel namaMobil
+}
+//Kode disini tidak bisa menggunakan variabel namaMobil
+    </pre>
+    <h3>Contoh</h3>
+    <pre>
+fungsiMobil();
+function fungsiMobil()
+{
+    var namaMobil = "Avanza";
+    console.log('Pemanggilan di dalam fungsi '+ namaMobil);
+}
+console.log('Pemanggilan di luar fungs '+ namaMobil);
+    </pre>
+    <hr>
+    <script>
+        console.log("Return Function");
+        function kalikanAngka(a1, a2){
+            return a1 * a2;
+        }
+        console.log(kalikanAngka(5, 10));
+        console.log("Scope Variabel Function");
+        function nameMobil(){
+            let namamobil = "Avanza";
+            console.log("Nama Mobil (dalam function) adalah " + namamobil);
+            
+        }
+        nameMobil();
+        console.log("Nama Mobil (diluar function) adalah ");
+        console.log("Hasilnya akan Error karena namamobil adalah variabel lokal function");
+        console.log(namamobil);
+        
+
+    </script>
+</body>
+</html>

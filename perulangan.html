@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Looping</title>
+    <style>
+        pre{
+            font-size: 2rem;
+        }
+    </style>
+</head>
+<body>
+<h1>Inspect element untuk melihat javascriptnya</h1>
+<hr>
+<h1>For Loop</h1>
+<h3>For loop digunakan untuk pengulangan melalui blok kode beberapa kali.</h3>
+
+<h3>Sintaks</h3>
+<pre>
+for(pernyataan1; pernyataan 2; pernyataan 3)
+{
+    //blog kode yang akan dijalankan
+}
+</pre>
+<ul>
+    <li>Penyataan 1 dijalankan (satu kali) sebelum eksekusi blok kode.</li>    
+    <li>Pernyataan 2 mendefinisikan kondisi untuk mengeksekusi blok kode.</li>
+    <li>Pernyataan 3 dijalankan (setiap saat) setelah blok kode dijalankan.</li>
+</ul>
+Contoh : 
+<pre>
+for(i = 0 ; i &#60; 5 ; i++){
+    teks += "Ini adalah nomor" + i;
+}
+</pre>
+<hr>
+<h1>While Loop</h1>
+<h3>While digunakan untuk pengulangan melalui blok kode selama kondisi tertentu benar.</h3>
+<pre>
+while(kondisi)
+{
+    //blok kode yang akan dijalankan
+}
+</pre>
+<h3>Contoh</h3>
+<pre>
+while(i &#60; 10)
+{
+    teks +="Ini adalah nomor " + i;
+    i++;
+}
+</pre>
+<hr>
+<h1>Do While Loop</h1>
+<h3>Do while loop adalah varian dari while loop. Looping ini akan mengeksekusi kode satu kali, sebelum memeriksa apakah kondisinya benar, jika kondisinya benar maka akan mengulang loop.</h3>
+<pre>
+do {
+    //kode yang akan dijalankan
+} while(kondisi);
+</pre>
+<h3>Contoh</h3>
+<pre>
+do {
+    teks +="Ini adalah nomor " + i;
+    i++;
+} while(i &#60; 10);
+</pre>
+<script>
+    for(let i = 0 ; i < 10 ; i++){
+        console.log("Ini Perulangan For ke " + i);
+    }
+    let j = 0;
+    while (j < 10){
+        console.log("Ini Perulangan While ke " + j);
+        j++;
+    }
+    let k = 0;
+    do {
+        console.log("Ini Perulangan Do While ke " + k);
+        k++;
+    } while (k < 10);
+</script>
+</body>
+</html>

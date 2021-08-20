@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Javascript</title>
+    <style>
+        pre{
+            font-size: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <h1>Inspect element untuk melihat javascriptnya</h1>
+    <hr>
+    <h1>Pengertian Object</h1>
+    <h3>Object pada bahasa pemroraman merupakan "abstraksi" dari benda yang ada di dunia nyata. Object dapat digunakan untuk menyimpan data.</h3>
+    <h3>Pada JavaScript, object terdiri dari name dan value(variable) atau method(fungsi)</h3>
+    <h1>Inisialisasi Object & Property & Method</h1>
+    <h3>Untuk penulisan object pada javascript sedikit berbeda dari bahasa pemrograman lain dimana pada javascript untuk menuliskan class tersebut berorientasi pada JSON (Javascript Object Notation) yang mana berupa array tetapi bermakna object</h3>
+    <h3>Contoh</h3>
+    <pre>
+var Mobil = 
+{
+    nama: "Toyota", 
+    tipe: "Agya",
+    berat: 600,
+    warna: "putih",
+    maju : function() {
+        return "Mobil Melaju";
+    },
+    mundur : function() {
+        return "Mobil Mundur";
+    }
+}
+    </pre>
+    <hr>
+    <h1>Mengakses Property dan Method pada Object</h1>
+    <h3>Untuk mengakses object tersebut tidak perlu instansiasi object cukup menuliskan nama variabel yang dianggap class dan juga nama method atau propertynya.</h3>
+    <h3>Sintaks</h3>
+    <pre>
+nama_object.nama_property;
+//mengakses property dari suatu object
+nama_object.nama_method();
+//mengakses method dari suatu object
+    </pre>
+    <h3>Contoh</h3>
+    <pre>
+console.log("Nama Mobil " + Mobil.nama);
+console.log("Method Mobil Maju " + Mobil.maju());
+    </pre>
+    <hr>
+    <script>
+        var Mobil = {
+            nama: "Toyota", 
+            tipe: "Agya",
+            berat: 600,
+            warna: "putih",
+            maju : function() {
+                return "Mobil Melaju";
+            },
+            mundur : function() {
+                return "Mobil Mundur";
+            }
+        }
+        console.log("Nama Mobil = " + Mobil.nama);
+        console.log("Berat Mobil = " + Mobil.berat);
+        console.log("Method Mobil Maju = " + Mobil.maju());
+        console.log("Method Mobil Mundur = " + Mobil.mundur());
+    </script>
+</body>
+</html>

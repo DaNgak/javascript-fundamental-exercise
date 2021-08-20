@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pengkondisian Javascript</title>
+    <style>
+        pre{
+            font-size: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <h1>Inspect element untuk melihat javascriptnya</h1>
+    <hr>
+    <h1>Perulangan</h1>
+    <h3>Pada javascript kita bisa menggunakan beberapa sintaks di bawah untuk menjalankan pernyataan kondisional.</h3>
+    <ol>
+        <li>If</li>
+        <li>Else</li>
+        <li>Else If</li>
+        <li>Switch</li>
+    </ol>
+    <hr>
+    <h1>If</h1>
+    <h3>Gunakan if untuk menentukan blok kode yang akan dieksekusi jika kondisi yang ditentukan bernilai benar.</h3>
+    <h3>Sintaks</h3>
+    <pre>
+if(kondisi)
+{
+    //kode yang akan dijalankan jika true
+}
+    </pre>
+    <h3>Contoh</h3>
+    <pre>
+if(jam &#60; 10)
+{
+    sambutan = "Selamat Pagi!";
+}
+    </pre>
+    <hr>
+    <h1>Else</h1>
+    <h3>Gunakan else untuk menentukan blok kode yang akan dieksekusi jika kondisi yang ditentukan bernilai salah.</h3>
+    <h3>Sintaks</h3>
+    <pre>
+if(kondisi)
+{
+    //kode yang akan dijalankan jika true
+}
+else
+{
+    //kode yang akan dijalankan jika false
+}
+    </pre>
+    <h3>Contoh</h3>
+    <pre>
+if(jam &#60; 10)
+{
+    sambutan = "Selamat Pagi!";
+}
+else
+{
+    sambutan = "Selamat Malam!";
+}
+    </pre>
+    <hr>
+    <h1>Else If</h1>
+    <h3>Gunakan pernyataan else if untuk menentukan kondisi baru jika kondisi pertama salah.</h3>
+    <h3>Sintaks</h3>
+    <pre>
+if(condition1)
+{
+    //jalankan jika kondisi 1 true
+}
+else if(condition2)
+{
+    //jalankan jika kondisi 1 false dan kondisi 2 true
+}
+else
+{
+    //jalankan jika kondisi 1 false dan kondisi 2 false
+}
+    </pre>
+    <h3>Contoh</h3>
+    <pre>
+if(jam &#60; 10)
+{
+    sambutan = "Selamat Pagi!";
+}
+else if(jam &#60; 20)
+{
+    sambutan = "Selamat siang!";
+}
+else
+{
+    sambutan = "Selamat Malam!";
+} 
+    </pre>
+    <hr>
+    <h1>Switch Case</h1>
+    <hr>
+    <h3>Pernyataan switch digunakan untuk melakukan tindakan yang berbeda berdasarkan pada kondisi yang berbeda. (sama seperti if-else if-else)</h3>
+    <h3>Sintaks</h3>
+    <pre>
+switch(expression)
+{
+    case x :
+        //kode
+    break;
+    case y:
+        //kode
+    break;
+    default:
+        //kode
+}
+    </pre>
+    <h3>Contoh</h3>
+    <pre>
+switch(x)
+{
+    case 0 :
+        text = "Padam";
+        break;
+    case 1:
+        text = "Nyala";
+        break;
+    default:
+        text= "Data Tidak Ada";
+        break;
+}
+    </pre>
+    <script>
+        let lampu;
+        if(lampu){
+            console.log("Lampu Nyala");
+        } else if (lampu === 0){
+            console.log("Lampu 0");
+        } else {
+            console.log("Tidak ada lampu");
+        }
+        lampu = "merah";
+        switch(lampu){
+            // case "kuning":
+            //     console.log("Lampu warna kuning");
+            //     break;
+            // case "hijau":
+            //     console.log("Lampu warna hijau");
+            //     break;
+            // case "merah":
+            //     console.log("Lampu warna merah");
+            //     break;
+            // Disingkat menjadi
+            case lampu:
+                console.log("Lampu warna " + lampu);
+                break;
+            default:log
+                console.log("Lampu tidak menyala");
+                break;
+        }
+
+
+    </script>
+</body>
+</html>
